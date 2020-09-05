@@ -1,0 +1,398 @@
+MODULE Module1
+    CONST robtarget home:=[[494.25763964,0,419],[0.5,0,0.866025404,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget pale_nuevo:=[[61.428,-450,10],[0,1,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget pale_enposicion_cercano:=[[30.714,458.188,140],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget pale_enposicion:=[[30.714,458.188,0],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cercano_pale_nuevo:=[[61.428,-450,121.709],[0,1,0,0],[-1,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget espera_de_cajamodelo:=[[417.312,0.001,268.837186077],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget tomar_caja_modelo:=[[417.312,0.001,38],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante1_2:=[[138.214,358.188,140],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante1:=[[-78.159,358.191,300],[0,1,0,0],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget home_1:=[[417.312,0.001,268.837186077],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget home_1_2:=[[417.312,0.001,268.837186077],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget tomar_caja_modelo_2:=[[417.312,0.001,38],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante1_2_2:=[[138.214,358.188,140],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante1_3:=[[138.214,358.188,40],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante2_2:=[[138.214,558.188,140],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante2:=[[-76.917,562.181,185],[0,1,0,0],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante3_2:=[[-76.786,558.188,140],[0,1,0,0],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante3:=[[142.08,560.85,100],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante4_2:=[[-76.786,358.188,140],[0,1,0,0],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante4:=[[140.837,356.854,300],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget tapa_nueva_1:=[[61.428,-450,-72],[0,1,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget tapa_1_en_posicion:=[[31.052,458.187,49.432],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget punto_cercano_banda:=[[417.652,0,145],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget tomar_caja_de_banda:=[[417.64,0,40],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar1_primerNivel:=[[-78.159,358.191,44.894],[0,1,0,0],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar2_primerNivel:=[[-76.917,562.181,44.879],[0,1,0,0],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar3_primerNivel:=[[142.08,560.85,44.894],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar4_primerNivel:=[[140.837,356.854,44.894],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar1_segundoNivel:=[[-78.448,560.187,91.479],[0,1,0,0],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar2_segundoNivel:=[[140.552,560.187,91.479],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget punto_cercano_banda_2:=[[417.652,0,145],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget tomar_caja_de_banda_2:=[[417.652,0,45],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar3_segundoNivel:=[[-78.448,356.187,91.479],[0,1,0,0],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar4_cuartoNivel:=[[140.552,356.187,91.479],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget tapa_nueva_2:=[[61.428,-450,-82],[0,1,0,0],[-1,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget tapa_nueva_enPosicion:=[[33.052,460.186,98.754],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar4_segundoNivel:=[[140.552,356.187,91.479],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante1_tercerNivel:=[[-76.448,562.186,145],[0,1,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar1_tercerNivel:=[[-76.448,562.186,140.032],[0,1,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante2_tercerNivel:=[[142.552,522.186,145],[0,1,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar2_tercerNivel:=[[142.552,522.186,140.032],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante3_tercerNivel:=[[-76.448,358.186,145],[0,1,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar3_tercerNivel:=[[-76.448,358.186,140.032],[0,1,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cuadrante4_tercerNivel:=[[142.552,358.186,145],[0,1,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget lugar4_tercernivel:=[[142.552,358.186,140.032],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget cerca_cajaEsquina:=[[415.84,-40,140],[0,1,0,0],[-1,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget tomar_cajaEsquina:=[[415.84,-40,40],[0,1,0,0],[-1,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget tapa_nueva_3:=[[61.428,-450,-92],[0,1,0,0],[-1,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget aprox_fijarTapa3:=[[51.851,458.186,173.199585424],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget fijar_tapa3:=[[51.851,458.186,148.595],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_20:=[[32.215,459.23,267.1643111],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_10:=[[32.215,459.23,148.852],[0,1,0,0],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+!***********************************************************
+      PROC main()
+WaitDI inicio,1;
+ubicar_palet;
+ubicar_nivel_1;
+tapa_nivel_1;
+cajas_nivel_2;
+tapa_nivel_2;
+cajas_nivel_3;
+tapar_nivel3;
+
+    ENDPROC
+    PROC ubicar_palet()
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        MoveL cercano_pale_nuevo,v300,fine,soporte\WObj:=wobj0;
+        MoveL pale_nuevo,v300,fine,soporte\WObj:=wobj0;
+        MoveL cercano_pale_nuevo,v300,fine,soporte\WObj:=wobj0;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        MoveL pale_enposicion_cercano,v300,fine,soporte\WObj:=wobj0;
+        MoveL pale_enposicion,v300,fine,soporte\WObj:=wobj0;
+        MoveL pale_enposicion_cercano,v300,fine,soporte\WObj:=wobj0;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;   
+        
+    ENDPROC
+    PROC ubicar_nivel_1()
+        
+        SetDO caja_nueva,1;
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;        
+        WaitDI sensor,1;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        WaitDI sensor,1;
+        MoveL tomar_caja_de_banda,v500,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante1,v500,fine,soporte\WObj:=wobj0;
+        MoveL lugar1_primerNivel,v500,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante1,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        
+        SetDO caja_nueva,1; 
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;
+                
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        WaitDI sensor,1;
+        MoveL tomar_caja_de_banda,v500,fine,soporte\WObj:=wobj0;
+               
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante2,v500,fine,soporte\WObj:=wobj0;
+        MoveL lugar2_primerNivel,v500,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante2,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        
+        SetDO caja_nueva,1;
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;
+        
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        WaitDI sensor,1;
+        MoveL tomar_caja_de_banda,v500,fine,soporte\WObj:=wobj0;
+        
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante3,v500,fine,soporte\WObj:=wobj0;
+        MoveL lugar3_primerNivel,v500,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante3,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        
+        SetDO caja_nueva,1;
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;
+        
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        WaitDI sensor,1;
+        MoveL tomar_caja_de_banda,v500,fine,soporte\WObj:=wobj0;
+     
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante4,v500,fine,soporte\WObj:=wobj0;
+        MoveL lugar4_primerNivel,v500,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante4,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        
+    ENDPROC
+    PROC Path_10()
+        tapa_nivel_2;
+
+    ENDPROC
+   
+    PROC tapa_nivel_1()
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL cercano_pale_nuevo,v500,fine,soporte\WObj:=wobj0;
+        MoveL tapa_nueva_1,v500,fine,soporte\WObj:=wobj0;
+        MoveL cercano_pale_nuevo,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL pale_enposicion_cercano,v500,fine,soporte\WObj:=wobj0;
+        MoveL tapa_1_en_posicion,v500,fine,soporte\WObj:=wobj0;
+        SetDO soltar_tapa_1,1;
+        SetDO soltar_tapa_1,0;
+        MoveL pale_enposicion_cercano,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        
+    ENDPROC
+    PROC tapa_nivel1()
+        MoveL home,v1000,z100,soporte\WObj:=wobj0;
+        MoveL cercano_pale_nuevo,v1000,z100,soporte\WObj:=wobj0;
+        MoveL tapa_nueva_1,v1000,z100,soporte\WObj:=wobj0;
+        MoveL cercano_pale_nuevo,v1000,z100,soporte\WObj:=wobj0;
+        MoveL home,v1000,z100,soporte\WObj:=wobj0;
+        MoveL pale_enposicion_cercano,v1000,z100,soporte\WObj:=wobj0;
+        MoveL tapa_1_en_posicion,v1000,z100,soporte\WObj:=wobj0;
+        MoveL pale_enposicion_cercano,v1000,z100,soporte\WObj:=wobj0;
+        MoveL home,v1000,z100,soporte\WObj:=wobj0;
+    ENDPROC
+    PROC cajas_nivel_1()
+        WaitDI paso,1;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL tomar_caja_de_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante1,v300,fine,soporte\WObj:=wobj0;
+        MoveL lugar1_primerNivel,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante1,v300,fine,soporte\WObj:=wobj0;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        WaitDI paso,1;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL tomar_caja_de_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante2,v300,fine,soporte\WObj:=wobj0;
+        MoveL lugar2_primerNivel,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante2,v300,fine,soporte\WObj:=wobj0;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        WaitDI paso,1;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL tomar_caja_de_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante3,v300,fine,soporte\WObj:=wobj0;
+        MoveL lugar3_primerNivel,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante3,v300,fine,soporte\WObj:=wobj0;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        WaitDI paso,1;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL tomar_caja_de_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante4,v300,fine,soporte\WObj:=wobj0;
+        MoveL lugar4_primerNivel,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante4,v300,fine,soporte\WObj:=wobj0;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+    ENDPROC
+    PROC cajas_nivel_2()
+        SetDO caja_nueva,1;
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;        
+        WaitDI sensor,1;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        WaitDI sensor,1;
+        MoveL tomar_caja_de_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante2,v300,fine,soporte\WObj:=wobj0;
+        MoveL lugar1_segundoNivel,v300,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante2,v300,fine,soporte\WObj:=wobj0;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        
+        SetDO caja_nueva,1;
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;        
+        WaitDI sensor,1;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        WaitDI sensor,1;
+        MoveL tomar_caja_de_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante3,v300,fine,soporte\WObj:=wobj0;
+        MoveL lugar2_segundoNivel,v300,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante3,v300,fine,soporte\WObj:=wobj0;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        
+        SetDO caja_nueva,1;
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;        
+        WaitDI sensor,1;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda_2,v300,fine,soporte\WObj:=wobj0;
+        WaitDI sensor,1;
+        MoveL tomar_caja_de_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante1,v300,fine,soporte\WObj:=wobj0;
+        MoveL lugar3_segundoNivel,v300,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante1,v300,fine,soporte\WObj:=wobj0;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        
+        SetDO caja_nueva,1;
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;        
+        WaitDI sensor,1;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL tomar_caja_de_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v300,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante4,v300,fine,soporte\WObj:=wobj0;
+        MoveL lugar4_segundoNivel,v300,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante4,v300,fine,soporte\WObj:=wobj0;
+        MoveL home,v300,fine,soporte\WObj:=wobj0;
+    ENDPROC
+    PROC tapa_nivel_2()
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL cercano_pale_nuevo,v500,fine,soporte\WObj:=wobj0;
+        MoveL tapa_nueva_2,v500,fine,soporte\WObj:=wobj0;
+        MoveL cercano_pale_nuevo,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL pale_enposicion_cercano,v500,fine,soporte\WObj:=wobj0;
+        MoveL tapa_nueva_enPosicion,v500,fine,soporte\WObj:=wobj0;
+        SetDO soltar_tapa_1,1;
+        SetDO soltar_tapa_1,0;
+        MoveL pale_enposicion_cercano,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+    ENDPROC
+    PROC cajas_nivel_3()
+        
+        SetDO caja_nueva,1;
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;        
+        WaitDI sensor,1;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        WaitDI sensor,1;
+        MoveL tomar_caja_de_banda,v500,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante1_tercerNivel,v500,fine,soporte\WObj:=wobj0;
+        MoveL lugar1_tercerNivel,v500,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante1_tercerNivel,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        
+        SetDO caja_nueva,1;
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;        
+        WaitDI sensor,1;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL cerca_cajaEsquina,v500,fine,soporte\WObj:=wobj0;
+        WaitDI sensor,1;
+        MoveL cerca_cajaEsquina,v500,fine,soporte\WObj:=wobj0;
+        MoveL tomar_cajaEsquina,v500,fine,soporte\WObj:=wobj0;
+        MoveL cerca_cajaEsquina,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante2_tercerNivel,v500,fine,soporte\WObj:=wobj0;
+        MoveL lugar2_tercerNivel,v500,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante2_tercerNivel,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        
+        SetDO caja_nueva,1;
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;        
+        WaitDI sensor,1;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        WaitDI sensor,1;
+        MoveL tomar_caja_de_banda,v500,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante3_tercerNivel,v500,fine,soporte\WObj:=wobj0;
+        MoveL lugar3_tercerNivel,v500,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante3_tercerNivel,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        
+        SetDO caja_nueva,1;
+        SetDO caja_nueva,0;
+        SetDO transportador,1;
+        WaitDI sensor,1;
+        SetDO transportador,0;        
+        WaitDI sensor,1;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        WaitDI sensor,1;
+        MoveL tomar_caja_de_banda,v500,fine,soporte\WObj:=wobj0;
+        MoveL punto_cercano_banda,v500,fine,soporte\WObj:=wobj0;
+        MoveL cuadrante4_tercerNivel,v500,fine,soporte\WObj:=wobj0;
+        MoveL lugar4_tercernivel,v500,fine,soporte\WObj:=wobj0;
+        SetDO soltarCaja,1;
+        SetDO soltarCaja,0;
+        MoveL cuadrante4_tercerNivel,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+    ENDPROC
+    PROC tapar_nivel3()
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL cercano_pale_nuevo,v500,fine,soporte\WObj:=wobj0;
+        MoveL tapa_nueva_3,v500,fine,soporte\WObj:=wobj0;
+        MoveL cercano_pale_nuevo,v500,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+        MoveL Target_20,v1000,fine,soporte\WObj:=wobj0;
+        MoveL Target_10,v1000,fine,soporte\WObj:=wobj0;
+        SetDO soltar_tapa_1,1;
+        SetDO soltar_tapa_1,0; 
+        MoveL Target_20,v1000,fine,soporte\WObj:=wobj0;
+        MoveL home,v500,fine,soporte\WObj:=wobj0;
+    ENDPROC
+ENDMODULE
