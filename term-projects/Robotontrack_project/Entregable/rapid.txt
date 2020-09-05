@@ -1,0 +1,42 @@
+MODULE Module1
+    CONST robtarget P0:=[[-302.005916326,995.502,1517.5],[0.5,0,0.866025404,0],[0,-1,0,0],[-495.91,9E+09,9E+09,9E+09,9E+09,0]];
+    CONST robtarget P1:=[[587.820170898,-509.191813041,110.58128396],[0,0,1,0],[-1,0,-2,0],[1284.31,9E+09,9E+09,9E+09,9E+09,0]];
+    CONST robtarget P2:=[[-1215.869002023,-114.132490685,1273.32058185],[0,0,1,0],[-1,0,-2,0],[-495.92,9E+09,9E+09,9E+09,9E+09,0]];
+    CONST robtarget P3:=[[-434.746,-199.263972882,1121.747288202],[0,0,1,0],[-1,0,-1,0],[45.14,9E+09,9E+09,9E+09,9E+09,0]];
+    CONST robtarget Target_10:=[[-1239.024211613,-888.123779206,890.157132281],[0,0,1,0],[0,0,0,0],[0,9E+09,9E+09,9E+09,9E+09,0]];
+    CONST robtarget Target_20:=[[-461.988301538,-758.995039511,1061.811173716],[0,0,1,0],[0,0,0,0],[411.66,9E+09,9E+09,9E+09,9E+09,0]];
+    CONST robtarget Target_30:=[[-296.382,-862.311,1238.325],[0,0,1,0],[0,0,0,0],[0,9E+09,9E+09,9E+09,9E+09,0]];
+    CONST robtarget P1_2:=[[595.76674795,-510,562.891346762],[0,0,1,0],[-1,0,-2,0],[1284.31,9E+09,9E+09,9E+09,9E+09,0]];
+	PROC main()
+         SetDO pinasys,0;  !Home gripper, abierto
+           SetDO startsys,1;  !Inicio de cintra transportadora
+           WaitDI sensorsys,1; !Esperar a que la caja llegue al sensor de posicion
+           SetDO startsys,0; !Apagar cinta transportadora
+            MoveJ P1_2,V2500,fine,griper_2_1\WObj:=conveyor_1;! Mover rapidamente a punto sobre la caja
+            MoveL P1,v1000,fine,griper_2_1\WObj:=conveyor_1; ! Agarrar la caja lentamente
+             SetDO pinasys,1; !Cerrar gripper
+            MoveJ P2,v1500,fine,griper_2_1\WObj:=conveyor_1; !Mover a punto destino
+            MoveL Target_10,v1000,fine,griper_2_1\WObj:=conveyor_1;!Mover a punto destino
+              SetDO pinasys,0; !Dejar caja en punto destino abriendo el gripper
+              MoveJ P2,v1500,fine,griper_2_1\WObj:=conveyor_1;!Mover a punto destino
+                MoveJ P0,V2500,fine,griper_2_1\WObj:=conveyor_1;!Volver a home
+            
+          SetDO startsys,1; !Inicio de cinta transportadora
+         WaitDI sensorsys,1;!Esperar a que la caja llegue al sensor de posicion
+           SetDO startsys,0;!Apagar cinta transportadora
+           MoveJ P1_2,V2500,fine,griper_2_1\WObj:=conveyor_1;! Mover rapidamente a punto sobre la caja
+           MoveL P1,v1000,fine,griper_2_1\WObj:=conveyor_1; ! Agarrar la caja lentamente
+            SetDO pinasys,1; !Cerrar gripper
+          MoveJ P3,v1500,fine,griper_2_1\WObj:=conveyor_1; !Mover a punto destino
+          MoveL Target_20,v1000,fine,griper_2_1\WObj:=conveyor_1;!Mover a punto destino
+          SetDO pinasys,0; !Dejar caja en punto destino abriendo el gripper
+          MoveJ P0,v2500,fine,griper_2_1\WObj:=conveyor_1;!Volver a home
+          
+        
+	ENDPROC
+    PROC Trayectoria()
+    ENDPROC
+    PROC Path_10()
+       
+    ENDPROC
+ENDMODULE
