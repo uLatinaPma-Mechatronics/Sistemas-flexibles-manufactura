@@ -7,5 +7,6 @@ JANCO VALDERRRAMA
 DAMIAN RODRIGUEZ
 
 RESUMEN:
-Sistema Flexible que hace 2 paletizados diferentes de acuerdo a las dimensiones de las cajas, proporcionando 2 pallets con cajas de un solo tipo, es decir las cajas pequeÒas con las pequeÒas y las grandes con las grandes, adem·s este proyecto se le adapta un sistema de seguridad que hace que el robot deje de trabajar al haber sensado algo.
-
+Sistema Flexible que hace 2 paletizados diferentes de acuerdo a las dimensiones de las cajas, proporcionando 2 pallets con cajas de un solo tipo, es decir las cajas peque√±as con las peque√±as y las grandes con las grandes, adem√°s este proyecto se le adapta un sistema de seguridad que hace que el robot deje de trabajar al haber sensado algo.
+LINK DEL VIDEO
+https://drive.google.com/file/d/1cvnx6QWrjbuPKvUSRfZrZj9mFZxcJTPY/view?usp=sharing 
